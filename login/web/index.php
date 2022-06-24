@@ -36,10 +36,10 @@ if (!isset($_SESSION['LoginOK'])) {
                <div class="w3l_grid">
                     <form class="login-container" action="/BTL_PTPM/process-login.php" method="POST">
                          <label for="exampleInputEmail1" class="form-label">Tài Khoản</label>
-                         <input placeholder="admin" type="text" id="exampleInputEmail1" aria-describedby="emailHelp" name="taikhoan">
+                         <input placeholder="username" type="text" id="exampleInputEmail1" aria-describedby="emailHelp" name="taikhoan">
 
                          <label for="exampleInputPassword1" class="form-label">Mật khẩu</label>
-                         <input placeholder="mật khẩu" type="password" class="form-control" id="exampleInputPassword1" name="password">
+                         <input placeholder="password" type="password" class="form-control" id="exampleInputPassword1" name="password">
 
                          <input type="submit" name="btnsignin" value="Submit">
                     </form>

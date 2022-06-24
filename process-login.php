@@ -9,18 +9,19 @@
             $row = mysqli_fetch_assoc($result);
             if(password_verify($password, $row['matkhau'])){
                 if($row['capbac']==1){
-                    
+                    $_SESSION['AdminLoginOK'] = '1'.$row['ma_taikhoan'];
+                    header("location: admin/index.php");
                 }else{
                     $_SESSION['LoginOK'] = '2'.$row['ma_taikhoan'];
                     header("location: manage/index.php");
                 }
             }else{
                 $error="Mật khẩu không chính xác!";
-                header("location: login.php?error=$error");
+                header("location: login/web/index.php?error=$error");
             }
         }else{
             $error="Tài khoản không tồn tại!";
-            header("location: login.php?error=$error");
+            header("location: login/web/index.php?error=$error");
         }
     }else{
         header("location: index.php");

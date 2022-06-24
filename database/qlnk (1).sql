@@ -125,7 +125,7 @@ INSERT INTO `sohokhau_taikhoan` (`ma_shk`, `ma_taikhoan`) VALUES
 --
 
 CREATE TABLE `taikhoan` (
-  `ma_taikhoan` int(10) UNSIGNED NOT NULL,
+  `ma_taikhoan` int(10) PRIMARY KEY UNSIGNED AUTO_INCREMENT NOT NULL,
   `taikhoan` varchar(20) NOT NULL,
   `matkhau` varchar(100) NOT NULL,
   `hoten` varchar(30) NOT NULL,
@@ -139,10 +139,10 @@ CREATE TABLE `taikhoan` (
 -- Đang đổ dữ liệu cho bảng `taikhoan`
 --
 
-INSERT INTO `taikhoan` (`ma_taikhoan`, `taikhoan`, `matkhau`, `hoten`, `chucvu`, `conlamviec`, `ngaykhoitao`, `capbac`) VALUES
-(1, 'nguyenvanbanh', '$2y$10$ZP0chrIq7NXcKcZ0RQwPC.vluWINiuR24YDiPswsNFPVMrxZ5HNHa', 'Nguyễn Văn Bảnh', 'Công an xã', 1, '2022-03-16 17:46:57', 2),
-(2, 'admin', '$2y$10$.VmlFr7TY7nXXvGBfhdbg.oQec18uhUxfq1wwjNYaVKsHBMQ0hF0.', 'admin', 'admin', 1, '2022-03-20 15:23:40', 1),
-(4, 'daoduydan', '$2y$10$ZP0chrIq7NXcKcZ0RQwPC.vluWINiuR24YDiPswsNFPVMrxZ5HNHa', 'Đào Duy Đán', 'Giám đốc', 1, '2022-06-08 06:56:17', 2);
+INSERT INTO `taikhoan` (`taikhoan`, `matkhau`, `hoten`, `chucvu`, `conlamviec`, `ngaykhoitao`, `capbac`) VALUES
+('nguyenvanbanh', '$2y$10$ZP0chrIq7NXcKcZ0RQwPC.vluWINiuR24YDiPswsNFPVMrxZ5HNHa', 'Nguyễn Văn Bảnh', 'Công an xã', 1, '2022-03-16 17:46:57', 2),
+('admin', '$2y$10$.VmlFr7TY7nXXvGBfhdbg.oQec18uhUxfq1wwjNYaVKsHBMQ0hF0.', 'admin', 'admin', 1, '2022-03-20 15:23:40', 1),
+('daoduydan', '$2y$10$ZP0chrIq7NXcKcZ0RQwPC.vluWINiuR24YDiPswsNFPVMrxZ5HNHa', 'Đào Duy Đán', 'Giám đốc', 1, '2022-06-08 06:56:17', 2);
 
 -- --------------------------------------------------------
 
