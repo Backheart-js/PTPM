@@ -125,7 +125,7 @@ INSERT INTO `sohokhau_taikhoan` (`ma_shk`, `ma_taikhoan`) VALUES
 --
 
 CREATE TABLE `taikhoan` (
-  `ma_taikhoan` int(10) PRIMARY KEY UNSIGNED AUTO_INCREMENT NOT NULL,
+  `ma_taikhoan` int(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `taikhoan` varchar(20) NOT NULL,
   `matkhau` varchar(100) NOT NULL,
   `hoten` varchar(30) NOT NULL,
